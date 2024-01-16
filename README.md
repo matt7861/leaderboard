@@ -1,20 +1,27 @@
-# Frontend Test Task with WebSocket
+# Frontend Task with WebSocket
+
+## Overview
+
+This project is a simple web application that displays a leaderboard consuming data from a WebSocket server. It's built using React with hooks and TypeScript, and styled with Material UI. The application showcases real-time data handling and dynamic UI updates.
 
 ## Goal
-- Your goal is to create a website like the one in the video fe-test-task.mov
-- The site must consume data from WebSocket and display it in a table.
-- It must display the top 10 users, sorted by score, highest to lowest. If there are already at least 10 rows, and a new entry arrives from WebSocket, but it has a lower score than the existing top 10, then it should be ignored and not added to the list.
-- The number of displayed results can be configured in Settings tab. By default it's 10.
-- Each row has a delete button, clicking that will remove the row.
 
-## Emitter
-- The backend service that emits the random data already exists and can be used as is.
-- To start it, you need to have Node.js installed, change directory to "emitter" and, run "npm i" and "npm start".
-- It will start a Socket.io server on ws://localhost:3050
+The primary objective is to create a website similar to the one demonstrated in the provided video. The site listens to data from a WebSocket and displays it in a sortable table, featuring a real-time leaderboard.
 
-## Requirements
-- Use React with hooks, TypeScript, WebSocket. Any other technologies are optional.
-- You don't need to persist any data.
-- The example in video uses Material UI.
-- Your solution should include the same visual elements as in video, but the design doesn't have to be an exact match.
-- Push your code to GitHub and share it with your hiring contact.
+## Running the Emitter
+
+The backend service (emitter) that emits random data is already set up. Follow these steps to get it running:
+
+Navigate to the emitter directory in the project.
+Run npm install to install the necessary packages.
+Execute npm start to start the Socket.io server.
+The server will run on ws://localhost:3050.
+
+## Running the Frontend
+
+To run the frontend application, follow these steps:
+
+Ensure the emitter is running as per the above instructions.
+In the root directory of the project, run npm install to install dependencies.
+Execute npm run dev to start the Vite server.
+The application will be available at http://localhost:3000.
